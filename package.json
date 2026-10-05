@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prep": "node -e \"require('fs').copyFileSync('node_modules/three/build/three.min.js','www/three.min.js')\"",
-    "postinstall": "npm run prep",
+    "prep": "mkdir -p www && cp node_modules/three/build/three.min.js www/three.min.js",
+"postinstall": "npm run prep"
     "sync": "npm run prep && cap sync",
     "android": "npm run sync && cap open android",
     "ios": "npm run sync && cap open ios"
@@ -14,6 +14,6 @@
     "@capacitor/cli": "^6.1.0",
     "@capacitor/core": "^6.1.0",
     "@capacitor/ios": "^6.1.0",
-    "three": "0.160.1"
+    "three": "0.159.0"
   }
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "prep": "mkdir -p www && cp node_modules/three/build/three.min.js www/three.min.js",
 "postinstall": "npm run prep",
-    "build": "npm run prep",
+    "build": "mkdir -p www && cp index.html www/index.html && npm run prep",
     "sync": "npm run prep && cap sync",
     "android": "npm run sync && cap open android",
     "ios": "npm run sync && cap open ios"
